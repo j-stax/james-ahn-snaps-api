@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import tagsRoute from './routes/tags.js'
+import photosRoutes from './routes/photos.js'
 
 const app = express();
 
@@ -22,11 +23,9 @@ app.use(express.json());
 
 app.use(cors({ origin: CORS_ORIGIN }));
 
-app.get('/photos', (req, res) => {
-    res.send("<h1>Hello World</h1>")
-});
-
 app.use('/tags', tagsRoute)
+
+app.use('/photos', photosRoutes)
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`)
