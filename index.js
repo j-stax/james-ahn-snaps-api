@@ -11,17 +11,15 @@ const logRequest = (req, res, next) => {
     next();
 }
 
-// 1. What else should we gitignore? .env
-// 2. What about comments.json? Include it in the photos.json
 // 3. How are we supposed to use the public/images/ http://localhost8080/public/images/...
 
 app.use(logRequest);
 
 const { PORT, CORS_ORIGIN } = process.env;
 
-app.use(express.json());
-
 app.use(cors({ origin: CORS_ORIGIN }));
+
+app.use(express.json());
 
 app.use('/tags', tagsRoute)
 

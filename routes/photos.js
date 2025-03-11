@@ -1,10 +1,16 @@
 import fs from 'fs';
+import { v4 as uuidv4 } from 'uuid';
 import express from 'express';
 const router = express.Router();
 
 const readPhotos = () => {
     const jsonPhotos = JSON.parse(fs.readFileSync('./data/photos.json'));
     return jsonPhotos;
+}
+
+const writePhotos = (data) => {
+    const stringifiedData = JSON.stringify(data);
+    fs.writeFileSync('./data/photos.json', stringifiedData)
 }
 
 router.get('/', (req, res) => {
@@ -32,7 +38,35 @@ router.get('/:id', (req, res) => {
         photographer: photo.photographer,
         tags: photo.tags
     }
-    res.json(photoExComments)
+    res.json(photoExComments);
+})
+
+router.get('/:id/comments', (req, res) => {
+    const { id } = req.params
+    const photosData = readPhotos();
+    const photo = photosData.find(photoObj => photoObj.id === id);
+    const photoComments = photo.comments;
+    res.json(photoComments)
+})
+
+router.post('/:id/comments', (req, res) => {
+    const { id } = req.params;
+    const { name, comment } = req.body;
+    const photosData = readPhotos();
+    const newCommentObj = {
+        name: name,
+        comment: comment,
+        id: uuidv4(),
+        timestamp: Date.now()
+    }
+    photosData.forEach(photo => {
+        if (photo.id === id) {
+            photo.comments.push(newCommentObj)
+        }
+    })
+    // writePhotos(photosData)
+    console.log(photosData[0])
+    res.json(newCommentObj)
 })
 
 export default router;
