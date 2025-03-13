@@ -4,6 +4,8 @@
         "photo": "http://localhost:8080/images/Photo-00.png",
         "photoDescription": "Looking up to the Manhattan Bridge, in New York City, New York.",
         "photographer": "Greg Hooper",
+        "likes": 910,
+        "timestamp": 1722956264000,
         "tags": [
             "New York",
             "Bridge",
@@ -24,6 +26,8 @@
         "photo": "http://localhost:8080/images/Photo-01.png",
         "photoDescription": "Saint Louis Art Museum, a white concrete building, under white sky during daytime.",
         "photographer": "Charlene Thomas",
+        "likes": 800,
+        "timestamp": 1722956264000,
         "tags": [
             "Missouri",
             "Buildings",
@@ -43,6 +47,8 @@
         "photo": "http://localhost:8080/images/Photo-02.png",
         "photoDescription": "Aerial view of city buildings in New York City, New York.",
         "photographer": "Malik Johnson",
+        "likes": 1685,
+        "timestamp": 1722956264000,
         "tags": [
             "New York",
             "Buildings",
@@ -74,6 +80,8 @@
         "photo": "http://localhost:8080/images/Photo-03.png",
         "photoDescription": "A bare tree in front of the Nancy and Rich Kinder Building at the Museum of Fine Arts Houston.",
         "photographer": "Elena Rossi",
+        "likes": 2362,
+        "timestamp": 1722956264000,
         "tags": [
             "Texas",
             "Buildings",
@@ -105,6 +113,8 @@
         "photo": "http://localhost:8080/images/Photo-04.png",
         "photoDescription": "A view of the Crystal Bridges Museum of American Art from across the water.",
         "photographer": "Amara Okoye",
+        "likes": 2667,
+        "timestamp": 1722854264143,
         "tags": [
             "Arizona",
             "Museum",
@@ -124,6 +134,8 @@
         "photo": "http://localhost:8080/images/Photo-05.png",
         "photoDescription": "A train traveling through Chicago, Illinois next to tall buildings.",
         "photographer": "Ali Novak-Greene",
+        "likes": 1048,
+        "timestamp": 1722954264143,
         "tags": [
             "Illinois",
             "Subway",
@@ -156,6 +168,8 @@
         "photo": "http://localhost:8080/images/Photo-06.png",
         "photoDescription": "Green trees beside the brown building of Ringling Museum in Sarasota, Florida during daytime.",
         "photographer": "Sofia Alvarez",
+        "likes": 2600,
+        "timestamp": 1722854264143,
         "tags": [
             "Florida",
             "Buildings"
@@ -180,6 +194,8 @@
         "photo": "http://localhost:8080/images/Photo-07.png",
         "photoDescription": "A view of the front of the Smithsonian Castle when arriving from The National Mall.",
         "photographer": "Dariya Menon",
+        "likes": 1225,
+        "timestamp": 1722531200000,
         "tags": [
             "Washington",
             "Cathedral"
@@ -191,6 +207,8 @@
         "photo": "http://localhost:8080/images/Photo-08.png",
         "photoDescription": "White concrete building nested in the Bayou Ben Collection and Gardens, a facility of the Museum of Fine Arts.",
         "photographer": "Nico Pascucci",
+        "likes": 360,
+        "timestamp": 1722797864000,
         "tags": [
             "Texas",
             "House",
@@ -210,6 +228,8 @@
         "photo": "http://localhost:8080/images/Photo-09.png",
         "photoDescription": "A group of people walking across Brooklyn Bridge in Brooklyn, New York.",
         "photographer": "Wei Zhang",
+        "likes": 1192,
+        "timestamp": 1722625064000,
         "tags": [
             "New York",
             "Bridge",
@@ -229,6 +249,8 @@
         "photo": "http://localhost:8080/images/Photo-10.png",
         "photoDescription": "A worm's-view of a brown brick building in Williamsburg, New York.",
         "photographer": "Greg Hooper",
+        "likes": 1594,
+        "timestamp": 1722625064000,
         "tags": [
             "New York",
             "Buildings"
@@ -253,6 +275,8 @@
         "photo": "http://localhost:8080/images/Photo-11.png",
         "photoDescription": "Looking out to the courtyard from the column-filled terrace at Ringling Museum in Sarasota, Florida.",
         "photographer": "Sofia Alvarez",
+        "likes": 28,
+        "timestamp": 1722452264000,
         "tags": [
             "Florida",
             "Courtyard",
@@ -272,6 +296,8 @@
         "photo": "http://localhost:8080/images/Photo-12.png",
         "photoDescription": "An old, run down, building sitting in the middle of a field.",
         "photographer": "Maxime Deserres",
+        "likes": 1594,
+        "timestamp": 1722452264000,
         "tags": [
             "Oregon",
             "Buildings"
@@ -290,6 +316,8 @@
         "photo": "http://localhost:8080/images/Photo-13.png",
         "photoDescription": "A yellow cab among a city of bricks in New York City, New York.",
         "photographer": "Val Cohen",
+        "likes": 964,
+        "timestamp": 1722452264000,
         "tags": [
             "New York",
             "Taxi",
@@ -316,6 +344,8 @@
         "photo": "http://localhost:8080/images/Photo-14.png",
         "photoDescription": "A man riding a skateboard down a sidewalk, outside of the Crystal Bridges Museum of American Art in Arizona.",
         "photographer": "Amara Okoye",
+        "likes": 1017,
+        "timestamp": 1722365864000,
         "tags": [
             "Arizona",
             "Courtyard",
@@ -341,6 +371,8 @@
         "photo": "http://localhost:8080/images/Photo-15.png",
         "photoDescription": "Music City Center located in downtown Nashville, Tennessee.",
         "photographer": "Ash Tanaka",
+        "likes": 360,
+        "timestamp": 1722365864000,
         "tags": [
             "Tennessee",
             "Museum",
@@ -353,6 +385,8 @@
         "photo": "http://localhost:8080/images/Photo-16.png",
         "photoDescription": "Shadows on a building nested in the Bayou Ben Collection and Gardens, a facility of the Museum of Fine Arts.",
         "photographer": "Nico Pascucci",
+        "likes": 2578,
+        "timestamp": 1722365864000,
         "tags": [
             "Texas",
             "House",
@@ -372,6 +406,8 @@
         "photo": "http://localhost:8080/images/Photo-17.png",
         "photoDescription": "An abandoned church and well, remnants of an old western town in Oregon.",
         "photographer": "Maxime Deserres",
+        "likes": 1373,
+        "timestamp": 1672531200000,
         "tags": [
             "Oregon",
             "House"
@@ -383,6 +419,8 @@
         "photo": "http://localhost:8080/images/Photo-18.png",
         "photoDescription": "Cables of the Brooklyn Bridge at sunset, creating a geometric pattern across the sky.",
         "photographer": "Thandiwe Ndugu",
+        "likes": 2563,
+        "timestamp": 1722106664000,
         "tags": [
             "New York",
             "Bridge",
@@ -420,6 +458,8 @@
         "photo": "http://localhost:8080/images/Photo-19.png",
         "photoDescription": "Curved lines form the white exterior of the Getty Museum in Los Angeles, California.",
         "photographer": "Kai Muller",
+        "likes": 46,
+        "timestamp": 1722106664000,
         "tags": [
             "California",
             "Museum",
@@ -439,6 +479,8 @@
         "photo": "http://localhost:8080/images/Photo-20.png",
         "photoDescription": "Orange metro tram on the street during daytime in downtown Houston, Texas.",
         "photographer": "Ingrid Smith",
+        "likes": 375,
+        "timestamp": 1722106664000,
         "tags": [
             "Texas",
             "Subway",
@@ -458,6 +500,8 @@
         "photo": "http://localhost:8080/images/Photo-21.png",
         "photoDescription": "White tiles and coastal blue windows form the geometric exterior of the Getty Museum in Los Angeles, California.",
         "photographer": "Kai Muller",
+        "likes": 1708,
+        "timestamp": 1722106664000,
         "tags": [
             "California",
             "Museum",
@@ -483,6 +527,8 @@
         "photo": "http://localhost:8080/images/Photo-22.png",
         "photoDescription": "Brick apartment buildings in downtown Nashville, Tennessee.",
         "photographer": "Ash Tanaka",
+        "likes": 2272,
+        "timestamp": 1721933864000,
         "tags": [
             "Tennessee",
             "Buildings"
@@ -501,6 +547,8 @@
         "photo": "http://localhost:8080/images/Photo-23.png",
         "photoDescription": "Looking down the columns at an amphitheater in Arlington, Virginia.",
         "photographer": "Alejandro Gomez",
+        "likes": 88,
+        "timestamp": 1721933864000,
         "tags": [
             "Virginia",
             "Columns"
