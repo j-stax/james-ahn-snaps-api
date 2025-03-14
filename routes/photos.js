@@ -57,20 +57,21 @@ router.post('/:id/comments', (req, res) => {
     const { id } = req.params;
     const { name, comment } = req.body;
     const photosData = readPhotos();
+
     const newCommentObj = {
         name: name,
         comment: comment,
         id: uuidv4(),
         timestamp: Date.now()
     }
+    
     photosData.forEach(photo => {
         if (photo.id === id) {
             photo.comments.push(newCommentObj)
         }
     })
-    // writePhotos(photosData)
-    console.log(photosData)
-    res.json(newCommentObj)
+    writePhotos(photosData)
+    res.status(201).json(newCommentObj)
 })
 
 export default router;
