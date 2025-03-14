@@ -70,7 +70,7 @@ router.post('/:id/comments', (req, res) => {
             photo.comments.push(newCommentObj)
         }
     })
-    // Overwrite file with updated data
+    // Overwrite photos.json file with updated data
     writePhotos(photosData)
     res.status(201).json(newCommentObj)
 })
