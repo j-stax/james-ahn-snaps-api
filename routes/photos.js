@@ -64,12 +64,13 @@ router.post('/:id/comments', (req, res) => {
         id: uuidv4(),
         timestamp: Date.now()
     }
-    
+    // Add new comment to the photo object
     photosData.forEach(photo => {
         if (photo.id === id) {
             photo.comments.push(newCommentObj)
         }
     })
+    // Overwrite file with updated data
     writePhotos(photosData)
     res.status(201).json(newCommentObj)
 })
