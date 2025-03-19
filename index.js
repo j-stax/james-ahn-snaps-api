@@ -4,6 +4,7 @@ import 'dotenv/config';
 import tagsRoute from './routes/tags.js';
 import photosRoutes from './routes/photos.js';
 
+// Pull in env variables
 const { PORT, CORS_ORIGIN } = process.env;
 
 const app = express();
