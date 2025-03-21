@@ -10,7 +10,7 @@ const { PORT, CORS_ORIGIN } = process.env;
 const app = express();
 
 const logRequest = (req, res, next) => {
-    if (!req.path.includes("images")) {
+    if (!req.path.includes("images") && !req.path.includes("tags")) {
         console.log(`Request: ${req.method} for ${req.path} on ${new Date()}`);
     }
     next();
