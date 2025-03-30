@@ -6,23 +6,33 @@
   functions = "dist"
   command = "npm run build"
 
-[[edge_functions]]
-  path = "/tags"
-  function = "/tags-get"
+[[redirects]]
+  from = "/tags"
+  to = "/.netlify/functions/tags-get"
+  status = 200
+  force = true
 
-[[edge_functions]]
-  path = "/photos"
-  function = "/photos-get"
+[[redirects]]
+  from = "/photos"
+  to = "/.netlify/functions/photos-get"
+  status = 200
+  force = true
 
-[[edge_functions]]
-  path = "/photos/:id"
-  function = "/photos-id"
+[[redirects]]
+  from = "/photos/:id"
+  to = "/.netlify/functions/photos-id"
+  status = 200
+  force = true
 
-[[edge_functions]]
-  path = "/photos/:id/comments"
-  function = "/photos-id-comments-get"
+[[redirects]]
+  from = "/photos/:id/comments"
+  to = "/.netlify/functions/photos-id-comments-get"
+  status = 200
+  force = true
 
-[[edge_functions]]
-  path = "/photos/:id/comments"
-  function = "/photos-id-comments-post"
+[[redirects]]
+  from = "/photos/:id/comments"
+  to = "/.netlify/functions/photos-id-comments-post"
   method = "POST"
+  status = 200
+  force = true
