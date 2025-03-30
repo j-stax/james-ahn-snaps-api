@@ -7,6 +7,12 @@
   command = "npm run build"
 
 [[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/tags"
   to = "/.netlify/functions/tags-get"
   status = 200
