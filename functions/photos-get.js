@@ -5,6 +5,7 @@ const handler = async (event) => {
     try {
         const filePath = path.join(__dirname, '../data/photos.json');
         const photosData = await fs.promises.readFile(filePath, 'utf-8');
+        console.log(photosData);
         const photosDataExComments = photosData.map(photo => {
             return {
                 id: photo.id,
