@@ -4,7 +4,7 @@ import path from 'path';
 const handler = async (event) => {
     try {
         const filePath = path.join(__dirname, '../data/photos.json');
-        const id = event.path.url.split('/').pop();
+        const id = event.rawUrl.split('/').pop();
         let photosData = await fs.promises.readFile(filePath, 'utf-8');
         photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
