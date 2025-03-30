@@ -20,18 +20,18 @@
 
 [[redirects]]
   from = "/photos/:id"
-  to = "/.netlify/functions/photos-[id]"
+  to = "/.netlify/functions/photos-id"
   status = 200
   methods = ["GET"]
 
 [[redirects]]
   from = "/photos/:id/comments"
-  to = "/.netlify/functions/photos-[id]-comments-get"
+  to = "/.netlify/functions/photos-id-comments-get"
   status = 200
   methods = ["GET"]
 
 [[redirects]]
   from = "/photos/:id/comments"
-  to = "/.netlify/functions/photos-[id]-comments-post"
+  to = "/.netlify/functions/photos-id-comments-post"
   status = 200
   methods = ["POST"]
