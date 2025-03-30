@@ -2,7 +2,7 @@
   directory = "functions"
 
 [build]
-  publish = "public"
+  publish = "dist"
   command = "npm run build"
 
 [[redirects]]
