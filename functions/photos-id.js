@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const handler = async (event) => {
+    console.log(event.pathParameters.id);
     try {
         const filePath = path.join(__dirname, '../data/photos.json');
         const { id } = event.pathParameters;
