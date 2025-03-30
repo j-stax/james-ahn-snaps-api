@@ -20,7 +20,7 @@ export const handler = () => {
         headers: {
             'Content-Type': 'text/html',
         },
-        body: "<html><h1>test test</h1></html>"
+        body: "<html><body><h1>test test</h1></body></html>"
     };
 
     // return {
