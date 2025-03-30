@@ -8,30 +8,30 @@
 
 [[redirects]]
   from = "/api/tags"
-  to = "/.netlify.app/functions/tags-get"
+  to = "https://snapsapi.netlify.app/functions/tags-get"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/api/photos"
-  to = "/.netlify.app/functions/photos-get"
+  to = "https://snapsapi.netlify.app/functions/photos-get"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/api/photos/:id"
-  to = "/.netlify.app/functions/photos-id"
+  to = "https://snapsapi.netlify.app/functions/photos-id"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/api/photos/:id/comments"
-  to = "/.netlify.app/functions/photos-id-comments-get"
+  to = "https://snapsapi.netlify.app/functions/photos-id-comments-get"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/api/photos/:id/comments"
-  to = "/.netlify.app/functions/photos-id-comments-post"
+  to = "https://snapsapi.netlify.app/functions/photos-id-comments-post"
   status = 200
   method = "POST"
