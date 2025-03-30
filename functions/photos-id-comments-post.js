@@ -7,7 +7,8 @@ const handler = async (event) => {
         const filePath = path.join(__dirname, '../data/photos.json');
         const { id } = event.pathParameters;
         const { name, comment } = event.pathParameters.body;
-        const photosData = await JSON.parse(fs.promises.readFile(filePath, 'utf-8'));
+        let photosData = await fs.promises.readFile(filePath, 'utf-8');
+        photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
         if (photo) {       
             const newCommentObj = {
@@ -23,7 +24,7 @@ const handler = async (event) => {
                 }
             });
 
-            await fs.promises.writeFile('./data/photos.json', photosData);
+            await fs.promises.writeFile('./data/photos.json', JSON.stringify(photosData));
             return {
                 statusCode: 201,
                 body: JSON.stringify(newCommentObj),
