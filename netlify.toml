@@ -6,32 +6,23 @@
   functions = "dist"
   command = "npm run build"
 
-[[redirects]]
-  from = "/tags"
-  to = "/tags-get"
-  status = 200
-  method = "GET"
+[[edge_functions]]
+  path = "/tags"
+  function = "/tags-get"
 
-[[redirects]]
-  from = "/photos"
-  to = "/photos-get"
-  status = 200
-  method = "GET"
+[[edge_functions]]
+  path = "/photos"
+  function = "/photos-get"
 
-[[redirects]]
-  from = "/photos/:id"
-  to = "/photos-id"
-  status = 200
-  method = "GET"
+[[edge_functions]]
+  path = "/photos/:id"
+  function = "/photos-id"
 
-[[redirects]]
-  from = "/photos/:id/comments"
-  to = "/photos-id-comments-get"
-  status = 200
-  method = "GET"
+[[edge_functions]]
+  path = "/photos/:id/comments"
+  function = "/photos-id-comments-get"
 
-[[redirects]]
-  from = "/photos/:id/comments"
-  to = "/photos-id-comments-post"
-  status = 200
+[[edge_functions]]
+  path = "/photos/:id/comments"
+  function = "/photos-id-comments-post"
   method = "POST"
