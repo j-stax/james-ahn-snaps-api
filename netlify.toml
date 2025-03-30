@@ -7,31 +7,31 @@
   command = "npm run build"
 
 [[redirects]]
-  from = "/tags"
+  from = "/api/tags"
   to = "/.netlify/functions/tags-get"
   status = 200
-  methods = ["GET"]
+  method = "GET"
 
 [[redirects]]
-  from = "/photos"
+  from = "/api/photos"
   to = "/.netlify/functions/photos-get"
   status = 200
-  methods = ["GET"]
+  method = "GET"
 
 [[redirects]]
-  from = "/photos/:id"
+  from = "/api/photos/:id"
   to = "/.netlify/functions/photos-id"
   status = 200
-  methods = ["GET"]
+  method = "GET"
 
 [[redirects]]
-  from = "/photos/:id/comments"
+  from = "/api/photos/:id/comments"
   to = "/.netlify/functions/photos-id-comments-get"
   status = 200
-  methods = ["GET"]
+  method = "GET"
 
 [[redirects]]
-  from = "/photos/:id/comments"
+  from = "/api/photos/:id/comments"
   to = "/.netlify/functions/photos-id-comments-post"
   status = 200
-  methods = ["POST"]
+  method = "POST"
