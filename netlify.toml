@@ -8,30 +8,30 @@
 
 [[redirects]]
   from = "/tags"
-  to = "/functions/tags-get"
+  to = "/.netlify/functions/tags-get"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/photos"
-  to = "/functions/photos-get"
+  to = "/.netlify/functions/photos-get"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/photos/:id"
-  to = "/functions/photos-id"
+  to = "/.netlify/functions/photos-id"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/photos/:id/comments"
-  to = "/functions/photos-id-comments-get"
+  to = "/.netlify/functions/photos-id-comments-get"
   status = 200
   method = "GET"
 
 [[redirects]]
   from = "/photos/:id/comments"
-  to = "/functions/photos-id-comments-post"
+  to = "/.netlify/functions/photos-id-comments-post"
   status = 200
   method = "POST"
