@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 import path from 'path';
+import { getResponseHeaders } from '../utils/getResponseHeaders';
 
 const handler = async (event) => {
     try {
@@ -28,10 +29,8 @@ const handler = async (event) => {
             await fs.promises.writeFile('./data/photos.json', JSON.stringify(photosData));
             return {
                 statusCode: 201,
-                body: JSON.stringify(newCommentObj),
-                headers: {
-                    'Content-Type': 'application/json',
-                }
+                headers: getResponseHeaders(),
+                body: JSON.stringify(newCommentObj)
             };
         } else {
             return {

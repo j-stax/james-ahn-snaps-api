@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { getResponseHeaders } from '../utils/getResponseHeaders';
 
 const handler = async (event) => {
     try {
@@ -7,10 +8,8 @@ const handler = async (event) => {
         const tags = await fs.promises.readFile(filePath, 'utf8');
         return {
             statusCode: 200,
+            headers: getResponseHeaders(),
             body: tags,
-            headers: {
-                'Content-Type': 'application/json',
-            }
         };
     } catch (err) {
         return {

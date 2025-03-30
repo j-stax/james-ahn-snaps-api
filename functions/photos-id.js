@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { getResponseHeaders } from '../utils/getResponseHeaders';
 
 const handler = async (event) => {
     try {
@@ -22,10 +23,8 @@ const handler = async (event) => {
             
             return {
                 statusCode: 200,
-                body: JSON.stringify(photoExComments),
-                headers: {
-                    'Content-Type': 'application/json',
-                }
+                headers: getResponseHeaders(),
+                body: JSON.stringify(photoExComments)
             };
         } else {
             return {
