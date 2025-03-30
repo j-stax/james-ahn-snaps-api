@@ -13,11 +13,21 @@ export const handler = () => {
         </html>
     `;
 
+    console.log(html)
+
     return {
         statusCode: 200,
         headers: {
             'Content-Type': 'text/html',
         },
-        body: html
-    }
+        body: "<html><h1>test test</h1></html>"
+    };
+
+    // return {
+    //     statusCode: 200,
+    //     headers: {
+    //         'Content-Type': 'text/html',
+    //     },
+    //     body: html
+    // };
 }
