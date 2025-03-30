@@ -1,8 +1,10 @@
 import fs from 'fs';
+import path from 'path';
 
 const handler = async (event) => {
     try {
-        const photosData = await fs.promises.readFile('./data/photos.json', 'utf-8');
+        const filePath = path.join(__dirname, '../data/photos.json');
+        const photosData = await fs.promises.readFile(filePath, 'utf-8');
         const photosDataExComments = photosData.map(photo => {
             return {
                 id: photo.id,

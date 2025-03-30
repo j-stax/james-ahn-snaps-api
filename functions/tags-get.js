@@ -1,8 +1,10 @@
 import fs from 'fs';
+import path from 'path';
 
 const handler = async (event) => {
     try {
-        const tags = await fs.promises.readFile('./data/tags.json', 'utf8');
+        const filePath = path.join(__dirname, '../data/tags.json');
+        const tags = await fs.promises.readFile(filePath, 'utf8');
         return {
             statusCode: 200,
             body: tags,

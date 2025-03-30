@@ -1,11 +1,13 @@
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
+import path from 'path';
 
 const handler = async (event) => {
     try {
+        const filePath = path.join(__dirname, '../data/photos.json');
         const { id } = event.pathParameters;
         const { name, comment } = event.pathParameters.body;
-        const photosData = await JSON.parse(fs.promises.readFile('./data/photos.json', 'utf-8'));
+        const photosData = await JSON.parse(fs.promises.readFile(filePath, 'utf-8'));
         const photo = photosData.find(photoObj => photoObj.id === id);
         if (photo) {       
             const newCommentObj = {

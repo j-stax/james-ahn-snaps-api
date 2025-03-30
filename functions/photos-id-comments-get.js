@@ -1,9 +1,11 @@
 import fs from 'fs';
+import path from 'path';
 
 const handler = async (event) => {
     try {
+        const filePath = path.join(__dirname, '../data/photos.json');
         const { id } = event.pathParameters;
-        const photosData = await JSON.parse(fs.promises.readFile('./data/photos.json', 'utf-8'));
+        const photosData = await JSON.parse(fs.promises.readFile(filePath, 'utf-8'));
         const photo = photosData.find(photoObj => photoObj.id === id);
         if (photo) {          
             return {
