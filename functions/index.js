@@ -1,4 +1,4 @@
-export const handler = () => {
+export const handler = async () => {
     const html = `
         <html>
             <body>
@@ -13,21 +13,11 @@ export const handler = () => {
         </html>
     `;
 
-    console.log(html)
-
     return {
         statusCode: 200,
         headers: {
             'Content-Type': 'text/html',
         },
-        body: "<html><body><h1>test test</h1></body></html>"
+        body: html
     };
-
-    // return {
-    //     statusCode: 200,
-    //     headers: {
-    //         'Content-Type': 'text/html',
-    //     },
-    //     body: html
-    // };
 }
