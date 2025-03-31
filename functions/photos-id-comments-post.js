@@ -8,7 +8,7 @@ const handler = async (event) => {
         const filePath = path.join(__dirname, '../data/photos.json');
         const urlSegments = event.rawUrl.split('/');
         const id = urlSegments[urlSegments.length - 2];
-        const { name, comment } = event.pathParameters.body;
+        const { name, comment } = JSON.parse(event.body);
         let photosData = await fs.promises.readFile(filePath, 'utf-8');
         photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
