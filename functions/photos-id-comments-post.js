@@ -12,6 +12,7 @@ const handler = async (event) => {
         let photosData = await fs.promises.readFile(filePath, 'utf-8');
         photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
+        
         if (photo) {       
             const newCommentObj = {
                 name: name,

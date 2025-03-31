@@ -33,7 +33,7 @@
 [[redirects]]
   from = "/photos/:id/comments"
   to = "/.netlify/functions/photos-id-comments-get"
-  method = "GET
+  method = "GET"
   status = 200
   force = true
 
