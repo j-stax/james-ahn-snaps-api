@@ -6,6 +6,13 @@
   functions = "dist"
   command = "npm run build"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+
 [[redirects]]
   from = "/"
   to = "/.netlify/functions/index"
@@ -43,10 +50,3 @@
   status = 200
   force = true
   conditions = ["method == 'GET'"]
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Headers = "Content-Type"
-    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
