@@ -31,7 +31,8 @@ const handler = async (event) => {
             return {
                 statusCode: 201,
                 headers: getResponseHeaders(),
-                body: JSON.stringify(newCommentObj)
+                // body: JSON.stringify(newCommentObj)
+                body: JSON.stringify({ name, comment })
             };
         } else {
             return {
