@@ -32,16 +32,16 @@
 
 [[redirects]]
   from = "/photos/:id/comments"
-  to = "/.netlify/functions/photos-id-comments-get"
-  method = "GET"
-  status = 200
+  to = "/.netlify/functions/photos-id-comments-post"
+  method = "POST"
+  status = 201
   force = true
 
 [[redirects]]
   from = "/photos/:id/comments"
-  to = "/.netlify/functions/photos-id-comments-post"
-  method = "POST"
-  status = 201
+  to = "/.netlify/functions/photos-id-comments-get"
+  method = "GET"
+  status = 200
   force = true
 
 [[headers]]
