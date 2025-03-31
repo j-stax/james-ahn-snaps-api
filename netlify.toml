@@ -33,14 +33,14 @@
 [[redirects]]
   from = "/photos/:id/comments"
   to = "/.netlify/functions/photos-id-comments-post"
-  method = "POST"
+  conditions = ["method == 'POST'"]
   status = 201
   force = true
 
 [[redirects]]
   from = "/photos/:id/comments"
   to = "/.netlify/functions/photos-id-comments-get"
-  method = "GET"
+  conditions = ["method == 'GET'"]
   status = 200
   force = true
 
