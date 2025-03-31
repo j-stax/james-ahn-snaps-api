@@ -13,6 +13,12 @@ const handler = async (event) => {
         photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
 
+        return {
+            statusCode: 201,
+            headers: getResponseHeaders(),
+            body: JSON.stringify({ name, comment })
+        }
+
         if (photo) {       
             const newCommentObj = {
                 name: name,
