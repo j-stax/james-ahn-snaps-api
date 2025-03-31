@@ -12,7 +12,7 @@ const handler = async (event) => {
         let photosData = await fs.promises.readFile(filePath, 'utf-8');
         photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
-        
+
         if (photo) {       
             const newCommentObj = {
                 name: name,
@@ -27,7 +27,7 @@ const handler = async (event) => {
                 }
             });
 
-            await fs.promises.writeFile('./data/photos.json', JSON.stringify(photosData));
+            await fs.promises.writeFile(filePath, JSON.stringify(photosData));
             return {
                 statusCode: 201,
                 headers: getResponseHeaders(),
