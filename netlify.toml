@@ -1,3 +1,5 @@
+# Settings to deploy on Netlify
+
 [functions]
   directory = "functions"
 
@@ -39,6 +41,6 @@
 
 [[redirects]]
   from = "/photos/:id/comments"
-  to = "/.netlify/functions/photos-id-comments"
+  to = "/.netlify/functions/photos-id-comments-handler"
   status = 200
   force = true

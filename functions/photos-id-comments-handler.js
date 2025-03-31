@@ -6,6 +6,15 @@ import { getResponseHeaders } from '../utils/getResponseHeaders';
 
 const handler = async (event) => {
     switch (event.httpMethod) {
+        case 'OPTIONS':
+            return {
+                statusCode: 200,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                }
+            }
         case 'GET':
             return await handleGetRequest(event);
         case 'POST':
