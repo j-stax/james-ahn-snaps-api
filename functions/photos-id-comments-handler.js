@@ -77,17 +77,17 @@ const handlePostRequest = async (event) => {
                 timestamp: Date.now()
             };
 
-            return {
-                statusCode: 201,
-                headers: getResponseHeaders(),
-                body: JSON.stringify(newCommentObj)
-            }
-
             photosData.forEach(photoObj => {
                 if (photoObj.id === id) {
                     photoObj.comments.push(newCommentObj);
                 }
             });
+
+            return {
+                statusCode: 201,
+                headers: getResponseHeaders(),
+                body: JSON.stringify(photosData)
+            }
 
             // await fs.promises.writeFile(filePath, JSON.stringify(photosData));
 
