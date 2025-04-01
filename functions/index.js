@@ -8,7 +8,7 @@ export const handler = async () => {
                         This is a simple Express server that I created for my BrainStation software engineering bootcamp photo sharing application. 
                         You can check out the source code <a href="https://github.com/j-stax/james-ahn-snaps-api" target="_blank">here.</a>
                     </p>
-                    <img style="width: 100%;" src="https://snapsapi.netlify.app/images/snaps-cover.png" alt="Image of Snaps app." />
+                    <img style="width: 100%; border-radius: 4px;" src="https://snapsapi.netlify.app/images/snaps-cover.png" alt="Image of Snaps app." />
                 </div>
             </body>
         </html>
