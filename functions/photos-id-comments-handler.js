@@ -67,6 +67,15 @@ const handlePostRequest = async (event) => {
         photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
 
+        return {
+            statusCode: 200,
+            headers: getResponseHeaders(),
+            body: {
+                photos: JSON.stringify(photosData),
+                photo: JSON.stringify(photo)
+            }
+        }
+
         if (photo) {       
             const newCommentObj = {
                 name: name,
