@@ -10,7 +10,7 @@ const handler = async (event) => {
             return {
                 statusCode: 200,
                 headers: {
-                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Origin': 'https://snapsjsx.netlify.app',
                     'Access-Control-Allow-Headers': 'Content-Type',
                     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
                 }
@@ -82,7 +82,7 @@ const handlePostRequest = async (event) => {
             });
 
             await fs.promises.writeFile(filePath, JSON.stringify(photosData));
-            
+
             return {
                 statusCode: 201,
                 headers: getResponseHeaders(),
