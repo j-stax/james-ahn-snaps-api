@@ -61,7 +61,7 @@ const handleGetRequest = async (event) => {
 
 const handlePostRequest = async (event) => {
     try {
-        const filePath = path.join(__dirname, './data/photos.json');
+        const filePath = path.join(__dirname, '../data/photos.json');
         const urlSegments = event.rawUrl.split('/');
         const id = urlSegments[urlSegments.length - 2];
         const { name, comment } = JSON.parse(event.body);
