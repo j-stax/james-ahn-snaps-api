@@ -80,7 +80,7 @@ const handlePostRequest = async (event) => {
             return {
                 statusCode: 201,
                 headers: getResponseHeaders(),
-                body: JSON.stringify(photoObj)
+                body: JSON.stringify(newCommentObj)
             }
 
             photosData.forEach(photoObj => {
