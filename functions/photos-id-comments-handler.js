@@ -46,12 +46,14 @@ const handleGetRequest = async (event) => {
         } else {
             return {
                 statusCode: 404,
+                headers: getResponseHeaders(),
                 body: JSON.stringify({ message: `Data not found for photo ID ${id}.` })
             }
         };  
     } catch (err) {
         return {
             statusCode: 500,
+            headers: getResponseHeaders(),
             body: JSON.stringify({ message: "Error reading photos." })
         };
     }
@@ -75,14 +77,15 @@ const handlePostRequest = async (event) => {
                 timestamp: Date.now()
             };
 
+            return {
+                statusCode: 201,
+                headers: getResponseHeaders(),
+                body: JSON.stringify(photoObj)
+            }
+
             photosData.forEach(photoObj => {
                 if (photoObj.id === id) {
                     photoObj.comments.push(newCommentObj);
-                    return {
-                        statusCode: 201,
-                        headers: getResponseHeaders(),
-                        body: JSON.stringify(photoObj)
-                    }
                 }
             });
 
@@ -96,12 +99,14 @@ const handlePostRequest = async (event) => {
         } else {
             return {
                 statusCode: 404,
+                headers: getResponseHeaders(),
                 body: JSON.stringify({ message: `Data not found for photo ID ${id}.` })
             }
         };  
     } catch (err) {
         return {
             statusCode: 500,
+            headers: getResponseHeaders(),
             body: JSON.stringify({ message: "Error reading photos." })
         };
     }
