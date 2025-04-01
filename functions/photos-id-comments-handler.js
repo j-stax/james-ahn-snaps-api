@@ -68,7 +68,7 @@ const handlePostRequest = async (event) => {
         const photo = photosData.find(photoObj => photoObj.id === id);
 
         return {
-            statusCode: 200,
+            statusCode: 201,
             headers: getResponseHeaders(),
             body: {
                 photos: JSON.stringify(photosData),
