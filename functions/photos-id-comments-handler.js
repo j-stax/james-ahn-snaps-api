@@ -83,13 +83,7 @@ const handlePostRequest = async (event) => {
                 }
             });
 
-            return {
-                statusCode: 201,
-                headers: getResponseHeaders(),
-                body: JSON.stringify(photosData)
-            }
-
-            // await fs.promises.writeFile(filePath, JSON.stringify(photosData));
+            await fs.promises.writeFile(filePath, JSON.stringify(photosData));
 
             // return {
             //     statusCode: 201,
