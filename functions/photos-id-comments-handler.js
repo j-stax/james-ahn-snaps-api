@@ -83,19 +83,13 @@ const handlePostRequest = async (event) => {
                 }
             }); 
 
+            // await fs.promises.writeFile(filePath, JSON.stringify(photosData));
+
             return {
                 statusCode: 201,
                 headers: getResponseHeaders(),
-                body: JSON.stringify(filePath)
+                body: JSON.stringify(newCommentObj)
             };
-
-            // await fs.promises.writeFile(filePath, JSON.stringify(photosData));
-
-            // return {
-            //     statusCode: 201,
-            //     headers: getResponseHeaders(),
-            //     body: JSON.stringify(newCommentObj)
-            // };
         } else {
             return {
                 statusCode: 404,
