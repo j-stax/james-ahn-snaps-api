@@ -72,8 +72,8 @@ const handlePostRequest = async (event) => {
             statusCode: 201,
             headers: getResponseHeaders(),
             body: {
-                photos: JSON.stringify(photosData),
-                photo: JSON.stringify(photo)
+                name,
+                comment
             }
         }
 
