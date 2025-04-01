@@ -13,7 +13,6 @@ const handler = async (event) => {
                     'Access-Control-Allow-Origin': '*',
                     'Access-Control-Allow-Headers': 'Content-Type',
                     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-                    'Access-Control-Expose-Headers': 'Content-Type'
                 }
             }
         case 'GET':
@@ -71,10 +70,7 @@ const handlePostRequest = async (event) => {
         return {
             statusCode: 201,
             headers: getResponseHeaders(),
-            body: {
-                name,
-                comment
-            }
+            body: JSON.stringify({ name, comment })
         }
 
         if (photo) {       
