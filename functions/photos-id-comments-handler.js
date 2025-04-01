@@ -81,21 +81,15 @@ const handlePostRequest = async (event) => {
                 if (photoObj.id === id) {
                     photoObj.comments.push(newCommentObj);
                 }
-            });
+            }); 
+
+            await fs.promises.writeFile('../data/photos.json', JSON.stringify(photosData));
 
             return {
                 statusCode: 201,
                 headers: getResponseHeaders(),
-                body: JSON.stringify(filePath)
-            }    
-
-            // await fs.promises.writeFile(filePath, JSON.stringify(photosData));
-
-            // return {
-            //     statusCode: 201,
-            //     headers: getResponseHeaders(),
-            //     body: JSON.stringify(newCommentObj)
-            // };
+                body: JSON.stringify(newCommentObj)
+            };
         } else {
             return {
                 statusCode: 404,
