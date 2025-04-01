@@ -67,12 +67,6 @@ const handlePostRequest = async (event) => {
         photosData = JSON.parse(photosData);
         const photo = photosData.find(photoObj => photoObj.id === id);
 
-        return {
-            statusCode: 201,
-            headers: getResponseHeaders(),
-            body: JSON.stringify(photo)
-        }
-
         if (photo) {       
             const newCommentObj = {
                 name: name,
@@ -84,16 +78,21 @@ const handlePostRequest = async (event) => {
             photosData.forEach(photoObj => {
                 if (photoObj.id === id) {
                     photoObj.comments.push(newCommentObj);
+                    return {
+                        statusCode: 201,
+                        headers: getResponseHeaders(),
+                        body: JSON.stringify(photoObj)
+                    }
                 }
             });
 
-            await fs.promises.writeFile(filePath, JSON.stringify(photosData));
+            // await fs.promises.writeFile(filePath, JSON.stringify(photosData));
 
-            return {
-                statusCode: 201,
-                headers: getResponseHeaders(),
-                body: JSON.stringify(newCommentObj)
-            };
+            // return {
+            //     statusCode: 201,
+            //     headers: getResponseHeaders(),
+            //     body: JSON.stringify(newCommentObj)
+            // };
         } else {
             return {
                 statusCode: 404,
