@@ -22,12 +22,6 @@
   force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/tags"
   to = "/.netlify/functions/tags-get"
   status = 200
